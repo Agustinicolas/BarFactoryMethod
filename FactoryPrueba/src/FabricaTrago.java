@@ -1,15 +1,16 @@
 public abstract class FabricaTrago {
     
     public void servirTrago(){
-        preparacion();
+        recibirPedido();
         Trago tragoNuevo = crearTrago();
         tragoNuevo.ingredientes();
+        tragoNuevo.preparacion();
         servir();
     }
 
     public abstract Trago crearTrago();
 
-    public void preparacion(){
+    public void recibirPedido(){
         System.out.println("Agarrar vaso. Colocar vaso sobre la barra.\n");
     }
 

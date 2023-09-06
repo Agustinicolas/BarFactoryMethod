@@ -17,6 +17,8 @@ public class Prueba {
             System.out.println("Elegir Trago:");
             System.out.println("\t1. Fernet");
             System.out.println("\t2.Mojito");
+            System.out.println("\t3.Daiquiri");
+            System.out.println("\t4.Garibaldi");
             System.out.println("\t0.Agua y finalizar\n");
             System.out.println("##################################################");
             opcion = TecladoIn.readLineInt();
@@ -29,6 +31,16 @@ public class Prueba {
                 case 2:{
                     tragoElegido = new FabricaMojito();
                     cuenta.add(1600);
+                    cantidadTragos++;
+                }break;
+                case 3:{
+                    tragoElegido = new FabricaDaiquiri();
+                    cuenta.add(1400);
+                    cantidadTragos++;
+                }break;
+                case 4:{
+                    tragoElegido = new FabricaGaribaldi();
+                    cuenta.add(1200);
                     cantidadTragos++;
                 }break;
                 default:{
